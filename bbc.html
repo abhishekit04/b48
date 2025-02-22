@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: black;
+            padding: 10px;
+            color: white;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            background: white;
+            color: black;
+            padding: 5px 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a, .dropbtn {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 5px;
+            border: none;
+        }
+
+        .search-box button {
+            padding: 5px;
+            background: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-box {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>BBC</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Sign in</a>
+            <a href="#">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Reel</a>
+            <a href="#">Worklife</a>
+            <a href="#">Travel</a>
+            <a href="#">Future</a>
+            <div class="dropdown">
+                <button class="dropbtn">More ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">Culture</a>
+                    <a href="#">Music</a>
+                    <a href="#">Science</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+    </nav>
+
+</body>
+</html>

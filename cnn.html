@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Style Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            padding: 10px 20px;
+            color: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .logo img {
+            height: 30px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-start;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: auto;
+        }
+        .edition {
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-icon, .user-icon, .menu-icon {
+            cursor: pointer;
+        }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="cnn.webp" alt="CNN Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">World</a></li>
+            <li><a href="#">US Politics</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Style</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Videos</a></li>
+        </ul>
+        <div class="nav-icons">
+            <select class="edition">
+                <option>Edition</option>
+            </select>
+            <span class="search-icon">🔍</span>
+            <span class="user-icon">👤</span>
+            <span class="menu-icon">☰</span>
+        </div>
+    </nav>
+</body>
+</html>
